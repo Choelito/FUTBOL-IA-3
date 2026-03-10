@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagina de Futbol</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#0b3d0b;
+    color:white;
+}
+
+/* encabezado */
+header{
+    background:#062406;
+    padding:20px;
+    text-align:center;
+}
+
+/* menu */
+nav{
+    background:#0f5c0f;
+    text-align:center;
+    padding:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+/* contenedor principal */
+.contenedor{
+    width:90%;
+    margin:auto;
+    padding:20px;
+}
+
+/* galeria de imagenes */
+.galeria{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+}
+
+/* espacio para imagenes */
+.card{
+    width:300px;
+    background:#124d12;
+    margin:15px;
+    border-radius:10px;
+    overflow:hidden;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card p{
+    padding:10px;
+}
+
+/* footer */
+footer{
+    background:#062406;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Noticias de Futbol</h1>
+<p>Estadisticas, jugadores y partidos</p>
+</header>
+
+<nav>
+<a href="#">Inicio</a>
+<a href="#">Jugadores</a>
+<a href="#">Equipos</a>
+<a href="#">Partidos</a>
+<a href="#">Contacto</a>
+</nav>
+
+<div class="contenedor">
+
+<h2>Galeria de Futbol</h2>
+
+<div class="galeria">
+
+<div class="card">
+<img src="imagen1.jpg" alt="imagen futbol">
+<p>Jugador destacado</p>
+</div>
+
+<div class="card">
+<img src="imagen2.jpg" alt="imagen futbol">
+<p>Mejor jugada del partido</p>
+</div>
+
+<div class="card">
+<img src="imagen3.jpg" alt="imagen futbol">
+<p>Equipo campeón</p>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 Pagina de Futbol</p>
+</footer>
+
+</body>
+</html>

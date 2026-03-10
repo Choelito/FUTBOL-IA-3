@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOOTBALL EA</title>
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+/* BUSCADOR */
+
+.search-box{
+position:relative;
+}
+
+#buscador{
+padding:10px;
+border-radius:6px;
+border:none;
+outline:none;
+width:220px;
+}
+
+#resultados{
+position:absolute;
+top:40px;
+left:0;
+background:#111;
+width:260px;
+border-radius:8px;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+display:none;
+max-height:300px;
+overflow-y:auto;
+}
+
+.resultado-item{
+padding:10px;
+border-bottom:1px solid #222;
+cursor:pointer;
+color:white;
+}
+
+.resultado-item:hover{
+background:#00ff66;
+color:black;
+}
+
+/* RESULTADO GRANDE */
+
+.resultado-grande{
+display:none;
+justify-content:center;
+margin-top:30px;
+}
+
+.card-resultado{
+background:#111;
+border:2px solid #00ff66;
+border-radius:12px;
+padding:20px;
+width:320px;
+text-align:center;
+}
+
+.card-resultado img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.card-resultado h2{
+color:#00ff66;
+}
+
+/* BOTON VOLVER */
+
+#volverInicio{
+background:#00ff66;
+color:black;
+border:none;
+padding:8px 15px;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+#volverInicio:hover{
+background:#00cc55;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<p class="logo">FOOTBALL EA</p>
+
+<nav class="menu">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="servicios.html">Servicios</a></li>
+<li><a href="productos.html">Productos</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+</ul>
+</nav>
+
+<div style="text-align: center; margin: 20px;">
+<button onclick="window.open('https://proyecto-escolar-incoa.netlify.app/')" 
+style="background:#00ff66;color:black;padding:15px 30px;border:none;border-radius:10px;cursor:pointer;">
+Ver Datos de Fútbol
+</button>
+</div>
+
+<div class="right-section">
+<div class="search-box">
+
+<input type="text" id="buscador" placeholder="Buscar jugadores, equipos, entrenadores...">
+
+<div id="resultados"></div>
+
+</div>
+</div>
+
+</header>
+
+<!-- RESULTADO GRANDE -->
+
+<div id="resultado-grande" class="resultado-grande">
+<div class="card-resultado">
+
+<button id="volverInicio">⬅ Volver al inicio</button>
+
+<img id="fotoJugador">
+
+<h2 id="nombreJugador"></h2>
+
+<p id="infoJugador"></p>
+
+</div>
+</div>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Bienvenido a tu página de confianza para saber de jugadores, partidos y estadísticas</h1>
+</div>
+</section>
+
+<section class="galeria-jugadores">
+
+<h2>Jugadores Destacados</h2>
+
+<div class="grid-jugadores">
+
+<div class="jugador">
+<img src="img/messi 2.jpeg" style="width:100%;height:250px;object-fit:cover;">
+<div class="info">
+<h3>Lionel Messi</h3>
+<p>⚽ Goles: 821</p>
+<p>🎯 Asistencias: 350</p>
+<p>🏟 Partidos: 1040</p>
+</div>
+</div>
+
+<div class="jugador">
+<img src="img/cr7.jpeg" style="width:100%;height:250px;object-fit:cover;">
+<div class="info">
+<h3>Cristiano Ronaldo</h3>
+<p>⚽ Goles: 850</p>
+<p>🎯 Asistencias: 240</p>
+<p>🏟 Partidos: 1180</p>
+</div>
+</div>
+
+<div class="jugador">
+<img src="c:\Users\MINEDUCYT\Downloads\WhatsApp Image 2026-03-09 at 11.20.09 PM.jpeg" style="width:100%;height:250px;object-fit:cover;">
+<div class="info">
+<h3>Kylian Mbappé</h3>
+<p>⚽ Goles: 300</p>
+<p>🎯 Asistencias: 120</p>
+<p>🏟 Partidos: 400</p>
+</div>
+</div>
+
+<div class="jugador">
+<img src="img/haaaland.jpeg" style="width:100%;height:250px;object-fit:cover;">
+<div class="info">
+<h3>Erling Haaland</h3>
+<p>⚽ Goles: 250</p>
+<p>🎯 Asistencias: 50</p>
+<p>🏟 Partidos: 300</p>
+</div>
+</div>
+
+<div class="jugador">
+<img src="c:\Users\MINEDUCYT\Downloads\WhatsApp Image 2026-03-09 at 11.20.06 PM.jpeg" style="width:100%;height:250px;object-fit:cover;">
+<div class="info">
+<h3>Neymar Jr</h3>
+<p>⚽ Goles: 400</p>
+<p>🎯 Asistencias: 200</p>
+<p>🏟 Partidos: 700</p>
+</div>
+</div>
+
+<div class="jugador">
+<img src="c:\Users\MINEDUCYT\Downloads\WhatsApp Image 2026-03-09 at 11.20.10 PM.jpeg" style="width:100%;height:250px;object-fit:cover;">
+<div class="info">
+<h3>Kevin De Bruyne</h3>
+<p>⚽ Goles: 150</p>
+<p>🎯 Asistencias: 250</p>
+<p>🏟 Partidos: 600</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="estadisticas">
+
+<h2 class="titulo-tabla">Estadísticas de Jugadores</h2>
+
+<table class="tabla-jugadores">
+
+<thead>
+<tr>
+<th>Jugador</th>
+<th>Equipo</th>
+<th>Posición</th>
+<th>Goles</th>
+<th>Asistencias</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Lionel Messi</td>
+<td>Inter Miami</td>
+<td>Delantero</td>
+<td>821</td>
+<td>361</td>
+</tr>
+
+<tr>
+<td>Cristiano Ronaldo</td>
+<td>Al Nassr</td>
+<td>Delantero</td>
+<td>850</td>
+<td>250</td>
+</tr>
+
+<tr>
+<td>Kylian Mbappé</td>
+<td>Real Madrid</td>
+<td>Delantero</td>
+<td>320</td>
+<td>120</td>
+</tr>
+
+<tr>
+<td>Erling Haaland</td>
+<td>Manchester City</td>
+<td>Delantero</td>
+<td>250</td>
+<td>60</td>
+</tr>
+
+<tr>
+<td>Neymar Jr</td>
+<td>Al Hilal</td>
+<td>Extremo</td>
+<td>440</td>
+<td>260</td>
+</tr>
+
+<tr>
+<td>Kevin De Bruyne</td>
+<td>Manchester City</td>
+<td>Mediocampista</td>
+<td>150</td>
+<td>280</td>
+</tr>
+
+</tbody>
+</table>
+
+</section>
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-col">
+<h3>Visitas</h3>
+<p>Más de 10,000 visitas mensuales.</p>
+<p>Usuarios activos diarios.</p>
+<p>Estadísticas actualizadas.</p>
+</div>
+
+<div class="footer-col">
+<h3>Empresas</h3>
+<p>EA Sports</p>
+<p>FIFA</p>
+<p>La Liga</p>
+<p>Premier League</p>
+</div>
+
+<div class="footer-col">
+<h3>Inversores</h3>
+<p>Grupo Deportivo Mundial</p>
+<p>Sport Capital</p>
+<p>Football Analytics</p>
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 FOOTBALL EA - Todos los derechos reservados
+</div>
+
+</footer>
+
+<script>
+
+const datos = [
+
+{nombre:"Lionel Messi", tipo:"Jugador", equipo:"Inter Miami", foto:"img/messi 2.jpeg"},
+{nombre:"Cristiano Ronaldo", tipo:"Jugador", equipo:"Al Nassr", foto:"img/cr7.jpeg"},
+{nombre:"Kylian Mbappé", tipo:"Jugador", equipo:"Real Madrid", foto:"img/mbappe.jpeg"},
+{nombre:"Erling Haaland", tipo:"Jugador", equipo:"Manchester City", foto:"img/haaaland.jpeg"},
+{nombre:"Neymar Jr", tipo:"Jugador", equipo:"Al Hilal", foto:"imagenes/neymar.jpg"},
+{nombre:"Kevin De Bruyne", tipo:"Jugador", equipo:"Manchester City", foto:"img/kd bruyne.jpeg"},
+
+{nombre:"Real Madrid", tipo:"Equipo", foto:"imagenes/realmadrid.png"},
+{nombre:"Barcelona", tipo:"Equipo", foto:"imagenes/barcelona.png"},
+{nombre:"Manchester City", tipo:"Equipo", foto:"imagenes/mancity.png"},
+{nombre:"PSG", tipo:"Equipo", foto:"imagenes/psg.png"},
+
+{nombre:"Pep Guardiola", tipo:"Entrenador", foto:"imagenes/guardiola.jpg"},
+{nombre:"Carlo Ancelotti", tipo:"Entrenador", foto:"imagenes/ancelotti.jpg"},
+{nombre:"Jurgen Klopp", tipo:"Entrenador", foto:"imagenes/klopp.jpg"}
+
+];
+
+const buscador = document.getElementById("buscador");
+const resultados = document.getElementById("resultados");
+
+function mostrarResultado(item){
+
+document.getElementById("resultado-grande").style.display="flex";
+
+document.getElementById("fotoJugador").src = item.foto;
+
+document.getElementById("nombreJugador").innerText = item.nombre;
+
+if(item.tipo === "Jugador"){
+document.getElementById("infoJugador").innerText = "Jugador - " + item.equipo;
+}
+
+if(item.tipo === "Equipo"){
+document.getElementById("infoJugador").innerText = "Equipo de fútbol";
+}
+
+if(item.tipo === "Entrenador"){
+document.getElementById("infoJugador").innerText = "Entrenador profesional";
+}
+
+window.scrollTo({top:0,behavior:"smooth"});
+
+}
+
+buscador.addEventListener("keyup", function(e){
+
+let texto = buscador.value.toLowerCase();
+
+resultados.innerHTML = "";
+
+if(texto.length === 0){
+resultados.style.display = "none";
+return;
+}
+
+let filtrados = datos.filter(item =>
+item.nombre.toLowerCase().includes(texto)
+);
+
+filtrados.forEach(item =>{
+
+let div = document.createElement("div");
+
+div.classList.add("resultado-item");
+
+div.innerHTML = `
+<strong>${item.nombre}</strong><br>
+<small>${item.tipo}</small>
+`;
+
+div.onclick = function(){
+
+buscador.value = item.nombre;
+
+resultados.style.display = "none";
+
+mostrarResultado(item);
+
+};
+
+resultados.appendChild(div);
+
+});
+
+resultados.style.display = "block";
+
+if(e.key === "Enter"){
+
+let encontrado = datos.find(item =>
+item.nombre.toLowerCase().includes(texto)
+);
+
+if(encontrado){
+
+mostrarResultado(encontrado);
+
+}
+
+}
+
+});
+
+document.getElementById("volverInicio").onclick = function(){
+
+document.getElementById("resultado-grande").style.display="none";
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+};
+
+</script>
+
+</body>
+</html>
